@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Поиск кодона в ДНК</title>
+</head>
+<body>
+<p>{{ DNK }}</p>
+<p>{{ result }}</p>
+
+<form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Проверить">
+</form>	
+</body>
+</html>
